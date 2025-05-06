@@ -10,8 +10,6 @@ from .serializers import BookSerializer
 
 def home(request):
     return render(request, 'reviews/index.html')
-    books = Book.objects.all()
-    return render(request,'reviews/home.html', {'books': books})
     
 class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.all()
